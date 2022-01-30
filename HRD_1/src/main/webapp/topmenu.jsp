@@ -15,7 +15,7 @@
 <nav>
 <a href="showMember.jsp">후보조회</a>
 <a href="voteMember.jsp">투표하기</a>
-<a href="showVote.jsp">투표검수조회</a>
+<a href="showVoteList.jsp">투표검수조회</a>
 <a href="showScore.jsp">후보자등수</a>
 <a href="index.jsp">홈으로</a>
 </nav>
