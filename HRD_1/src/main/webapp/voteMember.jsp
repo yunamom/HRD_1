@@ -19,6 +19,10 @@ td{
 			alert("주민번호가 입력되지 않았습니다!");
 			f.v_jumin.focus(); return false;
 		}
+		if(f.v_jumin.value.length <13 || f.v_jumin.value.length >13){
+			alert("유효하지않은 주민번호 입니다.");
+			f.v_jumin.focus(); return false;
+		}
 		if(f.v_name.value == ""){
 			alert("성명이 입력되지 않았습니다!");
 			f.v_name.focus(); return false;
@@ -31,10 +35,18 @@ td{
 			alert("투표시간이 입력되지 않았습니다!");
 			f.v_time.focus(); return false;
 		}
+		if(f.v_time.value.length < 4 || f.v_time.value.length > 4){
+			alert("투표시간을 4자 로 입력해주세요:D 예)0930");
+			f.v_time.focus(); return false;
+		}
 		if(f.v_area.value == ""){
 			alert("투표장소가 입력되지 않았습니다!");
 			f.v_area.focus(); return false;
 		}
+		if(f.v_area.value != "제1투표장" && f.v_area.value != "제2투표장"){
+			alert("투표장소를 제1투표장 or 제2투표장 으로 입력해주세요 :D");
+			f.v_area.focus(); return false;
+		}		
 		if(f.v_confirm.value == ""){
 			alert("유권자확인이 선택되지 않았습니다!");
 			return false;
@@ -82,13 +94,13 @@ td{
 		<tr>
 			<th>투표시간</th>
 			<td>
-			<input type="text" name="v_time">
+			<input type="text" name="v_time" placeholder="예)0000">
 			</td>
 		</tr>
 		<tr>
 			<th>투표장소</th>
 			<td>
-			<input type="text" name="v_area">
+			<input type="text" name="v_area" placeholder="예)제1투표장">
 			</td>
 		</tr>
 		<tr>

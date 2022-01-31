@@ -33,7 +33,8 @@ nav a{
 nav a:hover{
 	color:black;
 }
-section{
+
+section{	
 	position: fixed;
 	top:140px;
 	width:100%;
@@ -48,7 +49,7 @@ section{
 .table table,th,td{
 	border-collapse: collapse;
 	border:1px solid #454545;
-	padding: 5px;
+	padding: 2px;
 }
 footer{
 	position: fixed;

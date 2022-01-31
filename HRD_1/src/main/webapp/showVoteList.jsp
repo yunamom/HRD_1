@@ -61,8 +61,7 @@ ResultSet rs = stmt.executeQuery(sql);
 		Calendar now = Calendar.getInstance();
 		
 		int age = now.get(Calendar.YEAR) - year;
-		
-		
+			
 		//성별 구하기
 		if(genderCode%2 != 0){
 			gender = "남";
