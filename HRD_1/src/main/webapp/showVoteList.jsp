@@ -13,11 +13,11 @@ String sql = " SELECT ";
        sql+= " v_name, ";
        sql+= " v_jumin, ";
        sql+= " m_no, ";
-       sql+= " v_time, ";
+       sql+= " concat(substr(v_time,1,2),':',substr(v_time,3,4)) v_time, ";
        sql+= " if(v_confirm='Y','확인','미확인') v_confirm ";
        sql+= " FROM tbl_vote_202005 ";
        sql+= " WHERE v_area = '제1투표장' ";
-       sql+= " ORDER BY v_time ASC";
+     
        
 ResultSet rs = stmt.executeQuery(sql);
 
@@ -31,7 +31,7 @@ ResultSet rs = stmt.executeQuery(sql);
 <body>
 <%@ include file="topmenu.jsp" %>
 <section>
-<h3>투표검수조회</h3>
+<h2>∙ 투표검수조회 ∙</h2>
 <div class="table">
 	<table width="650px">
 		<tr>
@@ -68,11 +68,7 @@ ResultSet rs = stmt.executeQuery(sql);
 		}
 		else{
 			gender = "여";
-		}
-		
-		String v_time = rs.getString("v_time");
-		String time = v_time.substring(0,2)+":";
-		       time+= v_time.substring(2); //마지막인덱스까지 출력된다.
+		}		
 		%>
 		<tr>
 			<td><%=rs.getString("v_name") %></td>
@@ -80,7 +76,7 @@ ResultSet rs = stmt.executeQuery(sql);
 			<td><%="만 "+age+"세"%></td>
 			<td><%=gender %></td>
 			<td><%=rs.getString("m_no") %></td>
-			<td><%=time %></td>
+			<td><%=rs.getString("v_time") %></td>
 			<td><%=rs.getString("v_confirm") %></td>
 		</tr>
 		<%} %>

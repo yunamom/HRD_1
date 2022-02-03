@@ -75,7 +75,7 @@ td{
 <body onload="fn_onload()">
 <%@ include file="topmenu.jsp" %>
 <section>
-<h3>투표하기</h3>
+<h2>∙ 투표하기 ∙</h2>
 <form name="frm" method="post" action="action.jsp">
 <div class="table">
 	<table width="500px">

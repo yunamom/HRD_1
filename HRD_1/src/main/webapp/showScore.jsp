@@ -31,7 +31,7 @@ ResultSet rs = stmt.executeQuery(sql);
 <body>
 <%@ include file="topmenu.jsp" %>
 <section>
-<h3>후보자등수</h3>
+<h2>∙ 후보자등수 ∙</h2>
 <div class="table">
 	<table width="300px">
 		<tr>
